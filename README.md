@@ -32,10 +32,6 @@ More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN threa
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>190,000 XGS</td><td>Initial Premine</td><td>0 Days</td></tr>
 <tr><td>2-200</td><td>1 XGS</td><td rowspan=1>Open Mining</td><td rowspan=1> Approx 0 Days</td></tr>
-<tr><th colspan=4>PoS Phase</th></tr>
-<tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
-<tr><td>259201-19,000,000</td><td colspan=2>Masternodes: 65%</td><td>Stakers: 35%</td></tr>
-</table>
 
 ### PoW Rewards Breakdown
 
