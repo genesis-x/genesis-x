@@ -1,0 +1,11 @@
+[Protocol]
+exec=genesisx-qt '%u'
+protocol=genesisx
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/genesisx_bg.qm</file>
+        <file alias="ca">locale/genesisx_ca.qm</file>
+        <file alias="cs">locale/genesisx_cs.qm</file>
+        <file alias="da">locale/genesisx_da.qm</file>
+        <file alias="de">locale/genesisx_de.qm</file>
+        <file alias="en">locale/genesisx_en.qm</file>
+        <file alias="en_US">locale/genesisx_en_US.qm</file>
+        <file alias="es">locale/genesisx_es.qm</file>
+        <file alias="fi">locale/genesisx_fi.qm</file>
+        <file alias="fr_FR">locale/genesisx_fr_FR.qm</file>
+        <file alias="hr">locale/genesisx_hr.qm</file>
+        <file alias="it">locale/genesisx_it.qm</file>
+        <file alias="ja">locale/genesisx_ja.qm</file>
+        <file alias="ko_KR">locale/genesisx_ko_KR.qm</file>
+        <file alias="nl">locale/genesisx_nl.qm</file>
+        <file alias="pl">locale/genesisx_pl.qm</file>
+        <file alias="pt">locale/genesisx_pt.qm</file>
+        <file alias="pt_BR">locale/genesisx_pt_BR.qm</file>
+        <file alias="ro_RO">locale/genesisx_ro_RO.qm</file>
+        <file alias="ru">locale/genesisx_ru.qm</file>
+        <file alias="sk">locale/genesisx_sk.qm</file>
+        <file alias="sv">locale/genesisx_sv.qm</file>
+        <file alias="tr">locale/genesisx_tr.qm</file>
+        <file alias="uk">locale/genesisx_uk.qm</file>
+        <file alias="zh_CN">locale/genesisx_zh_CN.qm</file>
+        <file alias="zh_TW">locale/genesisx_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=GenesisX
+Comment=GenesisX P2P Cryptocurrency
+Comment[fr]=GenesisX, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=GenesisX, eşten eşe kriptografik sanal para birimi
+Exec=genesisx-qt %u
+Terminal=false
+Type=Application
+Icon=genesisx128
+MimeType=x-scheme-handler/genesisx;
+Categories=Office;Finance;
