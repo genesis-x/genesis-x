@@ -11,7 +11,7 @@ GenesisX is a cutting edge cryptocurrency, with many features not available in m
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 5000 XGS.
 
-More information at [GenesisXCoin.com](http://www.genesisx.net/) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
 
 
 ### Coin Specs
