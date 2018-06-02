@@ -33,12 +33,6 @@ More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN threa
 <tr><td>1</td><td>190,000 XGS</td><td>Initial Premine</td><td>0 Days</td></tr>
 <tr><td>2-200</td><td>1 XGS</td><td rowspan=1>Test Mining</td><td rowspan=1> Approx 0 Days</td></tr>
 
-### PoW Rewards Breakdown
-
-<table>
-<th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Miner</th>
-<tr><td>2-3029</td><td>10 XGS</td><td>65% (6.5 XGS)</td><td>35% (3.5 XGS)</td></tr>
-</table>
 
 ### PoS Rewards Breakdown
 
