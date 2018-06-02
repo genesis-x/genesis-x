@@ -40,10 +40,10 @@ More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN threa
 <th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
 <tr><td>Phase 1</td><td>0-200</td><td>1 XGS</td><td>60% (0.6 XGS)</td><td>40% (0.4 XGS)</td></tr>
 <tr><td>Phase 2</td><td>201-25000</td><td>15 XGS</td><td>60% (9 XGS)</td><td>40% (6 XGS)</td></tr>
-<tr><td>Phase 3</td><td>777601-1036801</td><td>2 XGS</td><td>65% (1.3 XGS)</td><td>35% (0.7 XGS)</td></tr>
-<tr><td>Phase 4</td><td>1036802-Infinite</td><td>1 XGS</td><td>65% (0.65 XGS)</td><td>35% (0.35 XGS)</td></tr>
-<tr><td>Phase 5</td><td>3030-518400</td><td>10 XGS</td><td>65% (6.5 XGS)</td><td>35% (3.5 XGS)</td></tr>
-<tr><td>Phase 6</td><td>518401-777600</td><td>5 XGS</td><td>65% (3.25 XGS)</td><td>35% (1.75 XGS)</td></tr>
-<tr><td>Phase 7</td><td>777601-1036801</td><td>2 XGS</td><td>65% (1.3 XGS)</td><td>35% (0.7 XGS)</td></tr>
-<tr><td>Phase 8</td><td>1036802-Infinite</td><td>1 XGS</td><td>65% (0.65 XGS)</td><td>35% (0.35 XGS)</td></tr>
+<tr><td>Phase 3</td><td>25001-100000</td><td>30 XGS</td><td>70% (21 XGS)</td><td>30% (9 XGS)</td></tr>
+<tr><td>Phase 4</td><td>100001-200000</td><td>20 XGS</td><td>80% (16 XGS)</td><td>20% (4 XGS)</td></tr>
+<tr><td>Phase 5</td><td>200001-500000</td><td>10 XGS</td><td>85% (8.5 XGS)</td><td>15% (1.5 XGS)</td></tr>
+<tr><td>Phase 6</td><td>500001-1000000</td><td>5 XGS</td><td>90% (4.5 XGS)</td><td>10% (0.5 XGS)</td></tr>
+<tr><td>Phase 7</td><td>1000001-2000000</td><td>2 XGS</td><td>90% (1.8 XGS)</td><td>10% (0.2 XGS)</td></tr>
+<tr><td>Phase 8</td><td>2000001-Max</td><td>1 XGS</td><td>90% (0.9 XGS)</td><td>10% (0.1 XGS)</td></tr>
 </table>
