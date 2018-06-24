@@ -128,3 +128,6 @@ CMakeLists.txt
 cmake-build-debug
 config.log
 config.status
+
+src/leveldb/build_config.mk
+background.tiff*
