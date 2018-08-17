@@ -16,6 +16,7 @@
 #include "util.h"
 #include <boost/filesystem.hpp>
 #include <boost/lexical_cast.hpp>
+#include "spork.h"
 
 CBudgetManager budget;
 CCriticalSection cs_budget;
@@ -32,7 +33,7 @@ int GetBudgetPaymentCycleBlocks()
     if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
     //for testing purposes
 
-    return 144; //ten times per day
+    return 720; // twice a day in testnet
 }
 
 bool IsBudgetCollateralValid(uint256 nTxCollateralHash, uint256 nExpectedHash, std::string& strError, int64_t& nTime, int& nConf)
@@ -832,13 +833,18 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
-    if (chainActive.Tip() == NULL) return 0;
+    CAmount nSubsidy = 0;
+    CAmount totalBudget = 0;
+    if (chainActive.Tip() == NULL) return totalBudget;
 
-    if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        CAmount nSubsidy = 500 * COIN;
-        return ((nSubsidy / 100) * 10) * 146;
-    }
-	return 0;
+    nSubsidy = GetBlockValue(nHeight);
+    LogPrint("masternode","CBudgetManager::GetTotalBudget(%d): GetBlockValue(%d) returned %f COINs\n", nHeight, nHeight, nSubsidy / COIN);
+
+    // Define governance budget as 20% of the block value
+    totalBudget = ((nSubsidy / 100) * 20) * GetBudgetPaymentCycleBlocks();
+
+    LogPrint("masternode","CBudgetManager::GetTotalBudget(%d) returning %f COINs\n", nHeight, totalBudget / COIN);
+    return totalBudget;
 }
 
 void CBudgetManager::NewBlock()
@@ -1364,10 +1370,31 @@ CBudgetProposal::CBudgetProposal(const CBudgetProposal& other)
     fValid = true;
 }
 
+unsigned long getVetoHash(const std::string& str)
+{
+    unsigned long hash = 1;
+    for (size_t i = 0; i < str.size(); ++i)
+        hash = 13 * hash + (unsigned char)str[i];
+    return hash;
+}
+
 bool CBudgetProposal::IsValid(std::string& strError, bool fCheckCollateral)
 {
     if (GetNays() - GetYeas() > mnodeman.CountEnabled(ActiveProtocol()) / 10) {
         strError = "Proposal " + strProposalName + ": Active removal";
+        return false;
+    }
+
+    CTxDestination address1;
+    ExtractDestination(address, address1);
+    CBitcoinAddress address2(address1);
+    // create a unique string for the proposal
+    std::string proposalStr = strProposalName +"/"+ strURL +"/"+ address2.ToString() +"/"+ std::to_string(nAmount) +"/"+ std::to_string(nBlockStart) +"/"+ std::to_string(nBlockEnd);
+    int vetoHash = getVetoHash(proposalStr) % 2000000000;
+
+    LogPrint("mnbudget", "CBudgetProposal::IsValid Proposal '%s' has VETO hash %d\n", proposalStr, vetoHash);
+    if (GetSporkValue(SPORK_12_PROPOSAL_VETO) == vetoHash) {
+        strError = "Proposal Veto";
         return false;
     }
 
@@ -1419,7 +1446,7 @@ bool CBudgetProposal::IsValid(std::string& strError, bool fCheckCollateral)
 
     //can only pay out 10% of the possible coins (min value of coins)
     if (nAmount > budget.GetTotalBudget(nBlockStart)) {
-        strError = "Proposal " + strProposalName + ": Payment more than max";
+        strError = "Proposal " + strProposalName + ": Payment more than max (" + std::to_string(budget.GetTotalBudget(nBlockStart) / COIN) + ")";
         return false;
     }
 
