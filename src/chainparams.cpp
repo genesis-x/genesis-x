@@ -56,12 +56,16 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (     0, uint256("000007d87c5c9a214365124b0109599ca2640d6b1b3a86ebe855b310f49cebc0"))
     ( 20000, uint256("649f7d85aa7670cc4978f8b712f25d4063a984d0dd5ed165fc46f75d542cec4e"))
-    ( 40000, uint256("8ea815b75a8303fdd2a61202a4782313803de5c999fe74140aae45fe8e5143ea"));
+    ( 40000, uint256("8ea815b75a8303fdd2a61202a4782313803de5c999fe74140aae45fe8e5143ea"))
+    ( 80000, uint256("291b80515722ce1303ea9328e4e357c083a27ae040124fb7761bf344d5515686"))
+    ( 160000, uint256("ad09a3b1104591028b58483137112f9b283f6b4ee256de42cea620f9906b5839"))
+    ( 320000, uint256("7863d50ecdae80d7805a2ebd17004099e029bd8ca96660be92d0c4e3577c12c0"))
+    ( 674362, uint256("281275addbfda94a84582eb8093a96293040b4a551605dfcc28cf58a4a0048bf"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1529839927, // * UNIX timestamp of last checkpoint block
-    95164,      // * total number of transactions between genesis and last checkpoint
+    1568486240, // * UNIX timestamp of last checkpoint block
+    1361647,      // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     3425        // * estimated number of transactions per day after checkpoint
 };
@@ -162,14 +166,8 @@ public:
         assert(hashGenesisBlock == uint256("0x000007d87c5c9a214365124b0109599ca2640d6b1b3a86ebe855b310f49cebc0"));
         assert(genesis.hashMerkleRoot == uint256("0xb06e08dc5a82489295d588795918f77689025b06527eb6e7ebc0ec2974114688"));
 
-        vSeeds.push_back(CDNSSeedData("seeds1.genesisx.net", "seeds1.genesisx.net"));// DNS SEEDER
-		vSeeds.push_back(CDNSSeedData("seeds2.genesisx.net", "seeds2.genesisx.net"));// DNS SEEDER
-		vSeeds.push_back(CDNSSeedData("seeds3.genesisx.biz", "seeds3.genesisx.biz"));// DNS SEEDER
-		vSeeds.push_back(CDNSSeedData("seed1.genesisx.net",  "seed1.genesisx.net")); // DNS SEEDER
-		vSeeds.push_back(CDNSSeedData("95.179.132.121", "95.179.132.121"));// Single node - Tom
-		vSeeds.push_back(CDNSSeedData("95.179.130.54", "95.179.130.54"));// Single node - Tom
-		vSeeds.push_back(CDNSSeedData("45.77.227.117", "45.77.227.117"));// Single node - Tom
-		vSeeds.push_back(CDNSSeedData("108.61.188.67", "108.61.188.67"));// Single node - Tom
+        vSeeds.push_back(CDNSSeedData("xgs.seeds.mn.zone", "xgs.seeds.mn.zone"));// DNS SEEDER
+		vSeeds.push_back(CDNSSeedData("xgs.mnseeds.com", "xgs.mnseeds.com"));// DNS SEEDER
 		vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));// Single node - Remapper
 		vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));// Single node - Remapper
 		vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));// Single node - Remapper
