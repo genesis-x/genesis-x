@@ -9,7 +9,7 @@ There are many cryptocurrencies out there expanding and improving on privacy wit
 - Fast transactions featuring guaranteed zero confirmation transactions, PIVX named it _SwiftX_.
 - In simple terms, a masternode is a cryptocurrency full node or computer wallet that keeps a full copy of the blockchain in real-time this is always kept up and running (unless you close the server your masternode is running on). There are many positive aspects to masternodes as they can increase the privacy of transactions and can contribute to perform instant transactions. GenesisX masternodes has also introduced a governing system which enables and gives masternode holders rights to vote for possible upcoming changes and gives them power in this project so the community is supported. Masternodes also help the circulation of XGS (GenesisX) and gives others opportunity to invest if reward holders choose to sell their gains. We look to enforce a budgeting system in the future which will involve the use of masternodes. Having a masternode enables you to mine without the stress of having to keep your mining rig running (because you won't need a mining rig) and it will not produce high electricity bills. Of course you won't need the hardware such as GPU's (Graphic cards) which tend to cost a lot to use your masternode.
 
-More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [GenesisX.network](http://www.genesisx.network/) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=4408230.0)
 
 
 ### Coin Specs
@@ -32,7 +32,7 @@ More information at [GenesisX.net](http://www.genesisx.net/) Visit our ANN threa
 <tr><td>2-200</td><td>1 XGS</td><td rowspan=1>Test Mining</td><td rowspan=1> Approx 0 Days</td></tr>
 
 
-### PoS Rewards Breakdown
+### PoS/Masternode Rewards Breakdown
 
 <table>
 <th>Phase</th><th>Block Height</th><th>Reward</th><th>Masternodes</th><th>Stakers</th>
