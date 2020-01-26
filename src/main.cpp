@@ -2551,7 +2551,7 @@ bool DisconnectBlock(CBlock& block, CValidationState& state, CBlockIndex* pindex
                 if (coins->vout.size() < out.n + 1)
                     coins->vout.resize(out.n + 1);
                 coins->vout[out.n] = undo.txout;
-				if (pindex->nHeight>350000)
+				if (pindex->nHeight>950000)
 				mapStakeSpent.erase(out);
             }
         }
@@ -3027,7 +3027,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         if (!pblocktree->WriteTxIndex(vPos))
             return state.Abort("Failed to write transaction index");
 		// add new entries
-		if (pindex->nHeight>350000)
+		if (pindex->nHeight>950000)
     for (const CTransaction tx: block.vtx) {
         if (tx.IsCoinBase())
             continue;
@@ -3038,7 +3038,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     }
 	
 	// delete old entries
-	if (pindex->nHeight>350000)
+	if (pindex->nHeight>950000)
     for (auto it = mapStakeSpent.begin(); it != mapStakeSpent.end();) {
         if (it->second < pindex->nHeight - Params().MaxReorganizationDepth()) {
             LogPrint("map", "mapStakeSpent: Erase %s | %u\n", it->first.ToString(), it->second);
@@ -4216,7 +4216,7 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
 
     int nHeight = pindex->nHeight;
 	
-	if (pindex->nHeight>350000)
+	if (pindex->nHeight>950000)
 	if (block.IsProofOfStake()) {
         LOCK(cs_main);
 
