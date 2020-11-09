@@ -397,7 +397,7 @@ Value masternodecurrent (const Array& params, bool fHelp)
             "\nExamples:\n" +
             HelpExampleCli("masternodecurrent", "") + HelpExampleRpc("masternodecurrent", ""));
 
-    const int nHeight = WITH_LOCK(cs_main, return chainActive.Height() + 1);
+    const int nHeight = chainActive.Height() + 1;
     int nCount = 0;
     CMasternode* winner = mnodeman.GetNextMasternodeInQueueForPayment(nHeight, true, nCount);
     if (winner) {
