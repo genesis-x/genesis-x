@@ -137,6 +137,8 @@ public:
         /** Height or Time Based Activations **/
         nLastPOWBlock = 200;
         nModifierUpdateBlock = 999999999;
+		nEnforceNewSporkKey = 1606249296; // Tuesday, 24 November 2020 20:21:36
+        nRejectOldSporkKey = 1606249297; ////  Tuesday, 24 November 2020 20:21:37
         nZerocoinStartHeight = 201;
         nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1527117718; // Human time (GMT): Wednesday, 23 May 2018 23:21:58
@@ -202,9 +204,9 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        //strSporkKey = "04125761a64cc8ed905753c157f2134ac5019a4933ba9891815735ca038bba59dac22b2ba3e62ca7d172315b6317748bc595131e4666d845ac6669715cef7865e5";
-		strSporkKey = "04d45416e4a64b1b051e2a2ebd80ced5efe148cf5fbcb70e56860957675a2da1a21fd522c42c1ed18a1ec42641589a09cf3f58678d213825dc21798183a005a984";
-        strObfuscationPoolDummyAddress = "Ceax8jHDQ1s2kHVjysEoTQncVdUrNBuXtp";
+        strSporkKey = "04d45416e4a64b1b051e2a2ebd80ced5efe148cf5fbcb70e56860957675a2da1a21fd522c42c1ed18a1ec42641589a09cf3f58678d213825dc21798183a005a984";
+		strSporkKeyOld = "04125761a64cc8ed905753c157f2134ac5019a4933ba9891815735ca038bba59dac22b2ba3e62ca7d172315b6317748bc595131e4666d845ac6669715cef7865e5";
+		strObfuscationPoolDummyAddress = "Ceax8jHDQ1s2kHVjysEoTQncVdUrNBuXtp";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
